@@ -9,16 +9,17 @@ Note:  This uses the jQuery UI dialog, and UI themes.  I am working on a non UI 
 
 I have an [active demo here](http://www.philpalmieri.com/js_sandbox/timedLogout/) – it is running on a 30 second timer for the logout, and if you open firebug you will see the keep alive firing every 10 seconds.
 
-usage
-===================
-`
-//Run with defaults
+## How to use
+
+### Run with defaults
+  
   $(document).ready(function(){
     $(document).idleTimeout();
   });
 
 
-/** With Optional Overrides **/
+### With Optional Overrides **/
+  
   $(document).ready(function(){
     $(document).idleTimeout({
       inactivity: 30000,
@@ -26,7 +27,6 @@ usage
       sessionAlive: 10000
     });
   });
-`
 
 The plugin has a few configuration items so you can customize it for your own needs…
 =============================================
