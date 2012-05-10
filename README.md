@@ -11,8 +11,8 @@ I have an [active demo here](http://www.philpalmieri.com/js_sandbox/timedLogout/
 
 usage
 ===================
-<code>
-/** Run with defaults **/
+`
+//Run with defaults
   $(document).ready(function(){
     $(document).idleTimeout();
   });
@@ -26,7 +26,7 @@ usage
       sessionAlive: 10000
     });
   });
-</code>
+`
 
 The plugin has a few configuration items so you can customize it for your own needs…
 =============================================
