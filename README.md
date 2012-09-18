@@ -2,6 +2,7 @@
 
 idle Activity Timeout and logut redirect for jQuery
 
+
 ## Demo
 
 Note:  This uses the jQuery UI dialog, and UI themes.  I am working on a non UI version – but it may be a while
