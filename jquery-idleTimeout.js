@@ -15,7 +15,10 @@
       click_reset: true,
       alive_url: '/js_sandbox/',
       logout_url: '/js_sandbox/',
-      showDialog: true
+      showDialog: true,
+	  dialogTitle: 'Auto Logout',
+	  dialogText: 'You are about to be signed out due to inactivity.',
+	  dialogButton: 'Stay Logged In'
     }
     
     //##############################
@@ -23,7 +26,7 @@
     //##############################
     var opts = $.extend(defaults, options);
     var liveTimeout, confTimeout, sessionTimeout;
-    var modal = "<div id='modal_pop'><p>You are about to be signed out due to inactivity.</p></div>";
+    var modal = "<div id='modal_pop'><p>"+opts.dialogText+"</p></div>";
 
     //##############################
     //## Private Functions
@@ -43,19 +46,22 @@
     
     var logout = function()
     {
-      
+      var my_dialog;
+	  var buttonsOpts = {};
+	  
       confTimeout = setTimeout(redirect, opts.noconfirm);
+	  
+	  buttonsOpts[opts.dialogButton] = function(){
+		my_dialog.dialog('close');
+		stay_logged_in();
+	  }
+	  
       if(opts.showDialog)
       {
-        $(modal).dialog({
-          buttons: {
-            "Stay Logged In":  function() {
-              $(this).dialog('close');
-              stay_logged_in();
-            }
-          },
+        my_dialog = $(modal).dialog({
+          buttons: buttonsOpts,
           modal: true,
-          title: 'Auto Logout'
+          title: opts.dialogButton
         });
       }
     }

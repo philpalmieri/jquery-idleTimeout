@@ -36,3 +36,6 @@ I have an [active demo here](http://www.philpalmieri.com/js_sandbox/timedLogout/
 - *redirect_url: ‘/js_sandbox/’*, //Where to go when log out
 - *click_reset: true*, //Reset timeout on clicks (for ajax interface) – resets the sessionAlive timer, so we are not hitting up your app with alive_url if we just did an ajax call for another  reason.
 - *logout_url: ‘/js_sandbox/timedLogout/index.html’* //logout before redirect (url so you can completely destroy the session before redirecting to login screen)
+- *dialogTitle: ‘Auto Logout’* //Title for the notice dialog 
+- *dialogText: ‘You are about to be signed out due to inactivity.’* //Content text for the notice dialog
+- *dialogButton: ‘Stay Logged In’* //Button label to stay logged in
