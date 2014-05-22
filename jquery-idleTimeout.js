@@ -61,7 +61,7 @@
         my_dialog = $(modal).dialog({
           buttons: buttonsOpts,
           modal: true,
-          title: opts.dialogButton
+          title: opts.dialogTitle
         });
       }
     }
