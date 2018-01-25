@@ -1,5 +1,5 @@
-# jquery-idleTimeout
-
+# jquery-idleTimeout - ARCHIVE - DO NOT USE THIS PLUGIN!!!! ITS OLD AND LONG DEAD
+## use the much newer/improved fork https://github.com/JillElaine/jquery-idleTimeout
 
 idle Activity Timeout and logut redirect for jQuery
 
